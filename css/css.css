@@ -240,7 +240,7 @@ section {
 
 .hero {
     position: relative;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 90px;
     min-height: 680px;
 
@@ -758,30 +758,34 @@ section {
 }
 
 
-/* ================= FLOATING CALL ================= */
+/* ================= FLOATING BUTTONS ================= */
 
-.floating-call {
+.floating-whatsapp {
     position: fixed;
     right: 24px;
     bottom: 24px;
     width: 54px;
     height: 54px;
+
     display: grid;
     place-items: center;
-    background: var(--pine);
+
+    background: #25D366;
     color: white;
+
     border-radius: 50%;
     box-shadow: 0 8px 24px rgba(29, 49, 40, 0.3);
+
     z-index: 900;
     transition: transform 0.2s;
 }
 
-.floating-call svg {
-    width: 22px;
-    height: 22px;
+.floating-whatsapp svg {
+    width: 26px;
+    height: 26px;
 }
 
-.floating-call:hover {
+.floating-whatsapp:hover {
     transform: scale(1.06);
 }
 
@@ -866,7 +870,7 @@ section {
     }
 
     .hero {
-        padding-top: 130px;
+        padding-top: 90px;
     }
 
     .hero h1 {
@@ -904,5 +908,10 @@ section {
 
     .hero-buttons .button {
         flex: 1;
+    }
+
+    .floating-whatsapp {
+        right: 18px;
+        bottom: 18px;
     }
 }
