@@ -830,6 +830,445 @@ section {
 }
 
 
+/* ================= PAGINAKOP (resultaten / ontruiming) ================= */
+
+.page-header {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background: var(--paper);
+}
+
+.page-header h1 {
+    font-size: clamp(34px, 5vw, 50px);
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+}
+
+.page-header-lead {
+    max-width: 560px;
+    font-size: 17px;
+}
+
+
+/* ================= VOOR & NA SHOWCASE ================= */
+
+.showcase {
+    background: var(--paper);
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.showcase-photo {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.showcase-photo img {
+    width: 100%;
+    display: block;
+    max-height: 560px;
+    object-fit: cover;
+}
+
+.showcase-tag {
+    position: absolute;
+    top: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(19, 47, 74, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.showcase-tag--before {
+    left: 20px;
+}
+
+.showcase-tag--after {
+    right: 20px;
+}
+
+.showcase-caption {
+    margin-top: 16px;
+    font-size: 14.5px;
+    color: var(--muted);
+    text-align: center;
+}
+
+
+/* ================= FOTOGALERIJ ================= */
+
+.gallery {
+    background: white;
+    padding-top: 60px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-photo {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background:
+            repeating-linear-gradient(135deg, var(--pine-tint) 0 14px, var(--paper) 14px 28px);
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+}
+
+.gallery-photo p {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--muted);
+    border: 1px solid var(--line);
+}
+
+.gallery-item figcaption {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.gallery-note {
+    margin-top: 32px;
+    font-size: 13.5px;
+    color: var(--muted);
+}
+
+
+/* ================= ANDER BEDRIJF (partner) ================= */
+
+.partner {
+    background: var(--pine-deep);
+    color: white;
+    margin-top: 20px;
+}
+
+.partner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.partner h2 {
+    color: white;
+    font-size: clamp(24px, 3.5vw, 32px);
+    margin-bottom: 10px;
+}
+
+.partner p {
+    max-width: 480px;
+    color: #C1D0DF;
+}
+
+
+/* ================= HUIS LEEGMAKEN PAGINA ================= */
+
+.house-hero {
+    background: var(--pine-deep);
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.house-hero .kicker {
+    color: #8FB4D6;
+}
+
+.house-hero h1 {
+    color: white;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.house-hero h1 span {
+    color: #BFD6EC;
+}
+
+.house-hero-text {
+    max-width: 560px;
+    font-size: 17px;
+    margin-bottom: 32px;
+    color: #C1D0DF;
+}
+
+.house-hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+    background: #25D366;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1DA851;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-secondary:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-white {
+    background: white;
+    color: var(--pine-deep);
+}
+
+.btn-white:hover {
+    background: var(--pine-tint);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-white:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ---- Over Ruzdo ---- */
+
+.about-owner {
+    background: white;
+}
+
+.owner-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.owner-photo {
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+}
+
+.owner-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.owner-content h2 {
+    font-size: clamp(26px, 3.6vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.owner-content p {
+    margin-bottom: 16px;
+}
+
+.owner-highlight {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+}
+
+.owner-highlight div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.owner-highlight strong {
+    color: var(--pine);
+    font-size: 13px;
+}
+
+.owner-highlight span {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 14.5px;
+}
+
+
+/* ---- Wat ik doe ---- */
+
+.house-service {
+    background: var(--paper);
+}
+
+.section-heading.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 26px 22px;
+}
+
+.service-number {
+    font-family: "Archivo", sans-serif;
+    color: var(--pine);
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.service-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 14px;
+}
+
+
+/* ---- Fotogalerij (geen onderschriften) ---- */
+
+.work-gallery {
+    background: white;
+}
+
+.work-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 190px;
+    gap: 14px;
+}
+
+.work-photo {
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--paper-alt);
+}
+
+.work-photo--tall {
+    grid-row: span 2;
+}
+
+.work-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.work-photo:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ---- CTA ---- */
+
+.house-cta {
+    text-align: center;
+    background: var(--pine);
+    color: white;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.house-cta h2 {
+    color: white;
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 8px 0 14px;
+}
+
+.house-cta p {
+    color: #CBDBEA;
+    max-width: 520px;
+    margin: 0 auto 30px;
+}
+
+.house-cta .house-hero-buttons {
+    justify-content: center;
+}
+.btn-house-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 56px;
+    padding: 0 32px;
+
+    background: #C58B3A;
+    color: white;
+
+    border: 1px solid #C58B3A;
+    border-radius: var(--radius);
+
+    font-weight: 600;
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.btn-house-info:hover {
+    background: #A96F27;
+    border-color: #A96F27;
+    color: white;
+
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(197, 139, 58, 0.25);
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
@@ -900,6 +1339,34 @@ section {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .partner-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .owner-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .owner-photo {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .work-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 160px;
+    }
 }
 
 
@@ -953,5 +1420,23 @@ section {
     .floating-whatsapp {
         right: 18px;
         bottom: 18px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .house-hero {
+        padding-top: 120px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .work-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
     }
 }
