@@ -61,3 +61,39 @@ revealElements.forEach(element => {
     element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     observer.observe(element);
 });
+const beforeAfter = document.getElementById("beforeAfter");
+const beforeWrapper = document.querySelector(".before-image-wrapper");
+const sliderLine = document.querySelector(".slider-line");
+
+if (beforeAfter && beforeWrapper && sliderLine) {
+
+    beforeAfter.addEventListener("mousemove", function (event) {
+
+        const rect = beforeAfter.getBoundingClientRect();
+
+        let position = event.clientX - rect.left;
+
+        position = Math.max(0, Math.min(position, rect.width));
+
+        const percentage = (position / rect.width) * 100;
+
+        /*
+         * De foto zelf blijft 100% groot.
+         * We veranderen alleen hoeveel ervan zichtbaar is.
+         */
+        beforeWrapper.style.clipPath =
+            `inset(0 ${100 - percentage}% 0 0)`;
+
+        sliderLine.style.left = percentage + "%";
+    });
+
+
+    beforeAfter.addEventListener("mouseleave", function () {
+
+        beforeWrapper.style.clipPath =
+            "inset(0 50% 0 0)";
+
+        sliderLine.style.left = "50%";
+    });
+
+}
