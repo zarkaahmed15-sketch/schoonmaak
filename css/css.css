@@ -1659,8 +1659,15 @@ section {
         padding: 70px 0;
     }
 
+
     .menu-toggle {
         display: flex;
+    }
+    .menu-toggle .bar {
+        width: 40px;
+        height: 3px;
+        background: #000000 !important;
+        display: block;
     }
 
     .nav {
