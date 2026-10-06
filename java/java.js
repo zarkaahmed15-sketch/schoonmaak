@@ -1,8 +1,4 @@
-// ============================================
-// CLEAN WEBSITE JAVASCRIPT
-// ============================================
 
-// ================= MOBILE MENU =================
 
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
@@ -12,7 +8,7 @@ menuToggle.addEventListener("click", () => {
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 
-// Close mobile menu when clicking a link
+
 const navLinks = document.querySelectorAll(".nav a");
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -21,7 +17,6 @@ navLinks.forEach(link => {
     });
 });
 
-// ================= HEADER SHADOW =================
 
 const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
@@ -32,12 +27,12 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// ================= CURRENT YEAR =================
+
 
 const year = document.getElementById("year");
 year.textContent = new Date().getFullYear();
 
-// ================= SCROLL REVEAL =================
+
 
 const revealElements = document.querySelectorAll(
     ".service-row, .intro-card, .about-content, .clearance-content, .contact-form"
@@ -77,10 +72,8 @@ if (beforeAfter && beforeWrapper && sliderLine) {
 
         const percentage = (position / rect.width) * 100;
 
-        /*
-         * De foto zelf blijft 100% groot.
-         * We veranderen alleen hoeveel ervan zichtbaar is.
-         */
+
+
         beforeWrapper.style.clipPath =
             `inset(0 ${100 - percentage}% 0 0)`;
 
